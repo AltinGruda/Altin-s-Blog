@@ -3,8 +3,9 @@ My own blog project, made with love!
 
 **Link to project:** heroku is down
 
-![image](https://user-images.githubusercontent.com/67205874/186967369-d88dbdfd-4879-4352-923e-d3ecfa6259a0.png)
-![image](https://user-images.githubusercontent.com/67205874/186967463-713ae60b-f92b-4c87-8200-1bfe67c92963.png)
+![image](https://user-images.githubusercontent.com/67205874/186969254-467d89bf-d4cd-4cc3-968a-59dd83aa8be9.png)
+![image](https://user-images.githubusercontent.com/67205874/186969326-aeb92f8a-9a94-4744-a525-0a02df818232.png)
+
 
 
 ## How It's Made:
