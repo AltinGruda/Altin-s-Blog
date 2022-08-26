@@ -1,0 +1,74 @@
+const express = require('express')
+const app = express()
+const MongoClient = require('mongodb').MongoClient
+const PORT = 3000
+const cors = require('cors')
+require('dotenv').config()
+
+
+let db,
+    dbConnectionStr = process.env.DB_STRING,
+    dbName = 'blog'
+
+MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true })
+    .then(client => {
+        console.log(`Connected to ${dbName} Database`)
+        db = client.db(dbName)
+    })
+    
+app.use(cors())
+app.set('view engine', 'ejs')
+app.use(express.static('public'))
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
+
+
+app.get('/',(request, response)=>{
+    db.collection('blog').find().sort({likes: -1}).toArray()
+    .then(data => {
+        response.render('index.ejs', { info: data })
+    })
+    .catch(error => console.error(error))
+})
+
+app.post('/addPost', (request, response) => {
+    db.collection('blog').insertOne({postTitle: request.body.postTitle,
+    postContent: request.body.postContent, likes: 0})
+    .then(result => {
+        console.log('Post Added')
+        response.redirect('/template')
+    })
+    .catch(error => console.error(error))
+})
+
+app.put('/addOneLike', (request, response) => {
+    db.collection('blog').updateOne({postTitle: request.body.postTitleS, postContent: request.body.postContentS,likes: request.body.likesS},{
+        $set: {
+            likes:request.body.likesS + 1
+          }
+    },{
+        sort: {_id: -1},
+        upsert: true
+    })
+    .then(result => {
+        console.log('Added One Like')
+        console.log(request.body.likesS)
+        response.json('Like Added')
+    })
+    .catch(error => console.error(error))
+
+})
+
+app.delete('/deletePost', (request, response) => {
+    db.collection('blog').deleteOne({postTitle: request.body.postTitleS})
+    .then(result => {
+        console.log('Blog Post Deleted')
+        response.json('Blog Post Deleted')
+    })
+    .catch(error => console.error(error))
+
+})
+
+app.listen(process.env.PORT || PORT, ()=>{
+    console.log(`Server running on port ${PORT}`)
+})
