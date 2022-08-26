@@ -9,7 +9,7 @@ My own blog project, made with love!
 
 ## How It's Made:
 
-**Tech used:** HTML, Tailwind, JavaScript, Node, Express, EJS
+**Tech used:** HTML, Tailwind, JavaScript, Node, Express, MongoDB, EJS
 
 Weeks ago I was involved in a project to make a blog. I had the job to do the backend of the project. Somehow unfulfilled after finishing it, as a fullstack developer I decided to make my own blog. So here it is, my own blog project!
 
