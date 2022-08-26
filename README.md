@@ -19,3 +19,8 @@ If I had more time, I would have introduced MVC architecture to the project.
 ## Lessons Learned:
 
 No matter what your experience level, being an engineer means continuously learning. This was my first time working with tailwind, and I really enjoyed working with it.
+
+## Check out the API I wrote for this project:
+Take a look at the API i wrote for this personal blog project:
+
+**Blog Api:** https://github.com/AltinGruda/blog-api
