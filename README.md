@@ -3,7 +3,7 @@ My own blog project, made with love!
 
 **Link to project:** heroku is down
 
-![alt tag](![image](https://user-images.githubusercontent.com/67205874/186967369-d88dbdfd-4879-4352-923e-d3ecfa6259a0.png))
+![image](https://user-images.githubusercontent.com/67205874/186967369-d88dbdfd-4879-4352-923e-d3ecfa6259a0.png)
 ![image](https://user-images.githubusercontent.com/67205874/186967463-713ae60b-f92b-4c87-8200-1bfe67c92963.png)
 
 
