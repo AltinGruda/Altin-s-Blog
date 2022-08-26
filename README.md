@@ -1,4 +1,4 @@
-# My Awesome Project
+# My Blog Project
 My own blog project, made with love!
 
 **Link to project:** heroku is down
